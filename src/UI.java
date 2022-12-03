@@ -9,4 +9,5 @@
  */
 public class UI {
     int a;
+    a=2;
 }
