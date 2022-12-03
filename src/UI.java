@@ -8,5 +8,5 @@
  * @author bahaa
  */
 public class UI {
-    
+    int a;
 }
