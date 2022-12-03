@@ -8,6 +8,7 @@ public class Main {
         String url="jdbc:mysql://localhost:3306/location";
         String username="root";
         String password="";
+        UI.Start();
         try {
             Class.forName ("com.mysql.cj.jdbc.Driver");
 
@@ -21,6 +22,7 @@ public class Main {
         }
         catch (Exception e) {
             System.out.println(e);
+            //test
         }
 
     }
