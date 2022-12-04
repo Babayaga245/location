@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="modified">
-      <change afterPath="$PROJECT_DIR$/src/AfficherVoitures.java" afterDir="false" />
+    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="added afficherTousLesVoitures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location.iml" beforeDir="false" afterPath="$PROJECT_DIR$/location.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AfficherVoitures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfficherVoitures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +71,7 @@
       <updated>1669911064002</updated>
       <workItem from="1669911065329" duration="47000" />
       <workItem from="1670099784790" duration="5898000" />
-      <workItem from="1670160949085" duration="2569000" />
+      <workItem from="1670160949085" duration="3778000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1670081283494</created>
@@ -109,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670084280098</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added afficherTousLesVoitures">
+      <created>1670163666076</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670163666076</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +136,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="new class" />
     <MESSAGE value="modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified" />
+    <MESSAGE value="added afficherTousLesVoitures" />
+    <option name="LAST_COMMIT_MESSAGE" value="added afficherTousLesVoitures" />
   </component>
 </project>

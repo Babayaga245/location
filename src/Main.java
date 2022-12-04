@@ -1,15 +1,10 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int n=0;
-        voiture[] cars = AfficherVoitures.Afficher(n);
+        client[] arr = Afficher.clients(n);
         for(int i=0;i<=n;i++)
         {
-            System.out.println("matricule ="+cars[i].GetMat()+"modele ="+cars[i].GetMod()+"prix="+cars[i].GetPrix());
+            System.out.println("num permis ="+arr[i].GetNumpermis()+"nom ="+arr[i].GetNom()+"prenom="+arr[i].GetPrenom()+"adresse="+arr[i].GetAdresse()+"tel="+arr[i].GetTel());
         }
 
         //String url="jdbc:mysql://localhost:3306/location";
