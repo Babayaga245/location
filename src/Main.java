@@ -1,16 +1,18 @@
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
         int n=0;
-        client[] arr = Afficher.clients(n);
+        //client[] arr = Afficher.clients(n);
         for(int i=0;i<=n;i++)
         {
-            System.out.println("num permis ="+arr[i].GetNumpermis()+"nom ="+arr[i].GetNom()+"prenom="+arr[i].GetPrenom()+"adresse="+arr[i].GetAdresse()+"tel="+arr[i].GetTel());
+            //System.out.println("num permis ="+arr[i].GetNumpermis()+"nom ="+arr[i].GetNom()+"prenom="+arr[i].GetPrenom()+"adresse="+arr[i].GetAdresse()+"tel="+arr[i].GetTel());
         }
 
         //String url="jdbc:mysql://localhost:3306/location";
         //String username="root";
         //String password="";
-        UI.Start();
+        UI.Start(Color.red);
         //try {
             //Class.forName ("com.mysql.cj.jdbc.Driver");
 

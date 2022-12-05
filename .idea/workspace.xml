@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="added afficherTousLesVoitures">
+    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="Ui">
+      <change afterPath="$PROJECT_DIR$/src/Images/bill.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/car (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/client.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/dashboard (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/info (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/money (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/money.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AfficherVoitures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AfficherVoitures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,13 +22,6 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,30 +38,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/rayen/Downloads/mysql-connector-java-8.0.30.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bahaa\IdeaProjects\location\src\Images" />
+      <recent name="C:\Users\bahaa\IdeaProjects\location\src" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="UserInter" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.projetjava.UserInter" />
       <module name="location" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mycompany.projetjava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,8 +75,6 @@
       <option name="presentableId" value="Default" />
       <updated>1669911064002</updated>
       <workItem from="1669911065329" duration="47000" />
-      <workItem from="1670099784790" duration="5898000" />
-      <workItem from="1670160949085" duration="3778000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1670081283494</created>
@@ -94,28 +97,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670081360904</updated>
     </task>
-    <task id="LOCAL-00004" summary="new class">
-      <created>1670084033714</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1670084033714</updated>
-    </task>
-    <task id="LOCAL-00005" summary="modified">
-      <created>1670084280098</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1670084280098</updated>
-    </task>
-    <task id="LOCAL-00006" summary="added afficherTousLesVoitures">
-      <created>1670163666076</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1670163666076</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,9 +116,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <MESSAGE value="new class" />
-    <MESSAGE value="modified" />
-    <MESSAGE value="added afficherTousLesVoitures" />
-    <option name="LAST_COMMIT_MESSAGE" value="added afficherTousLesVoitures" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
