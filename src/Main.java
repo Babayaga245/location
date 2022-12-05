@@ -12,7 +12,16 @@ public class Main {
         //String url="jdbc:mysql://localhost:3306/location";
         //String username="root";
         //String password="";
-        UI.Start(Color.red);
+
+
+
+
+        //ll coleur louwel mta3 dashboard wl color lekher mta3 ll panel lokhra
+        UI.Start(Color.red,Color.white);
+
+
+
+
         //try {
             //Class.forName ("com.mysql.cj.jdbc.Driver");
 

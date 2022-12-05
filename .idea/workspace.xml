@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="Ui">
-      <change afterPath="$PROJECT_DIR$/src/Images/bill.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/car (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/client.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/dashboard (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/info (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/info.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/money (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Images/money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +14,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670081360904</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ui">
+      <created>1670279028067</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670279028067</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ui" />
   </component>
 </project>
