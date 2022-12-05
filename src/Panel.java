@@ -14,14 +14,17 @@ public class Panel {
         ImageIcon info_icon = new ImageIcon("src\\Images\\info (1).png");
 
 
-        //Dashboard
 
+        //dashboard title
         JLabel headline = new JLabel();
         headline.setText("DASHBOARD");
         headline.setIcon(dash_icon);
         headline.setHorizontalAlignment(JLabel.CENTER);
         headline.setIconTextGap(10);
+        headline.setForeground(Color.WHITE);
+        headline.setFont(new Font("Segoe UI Black", 1, 28));
 
+        //vehicule button
         JButton jButton1 = new javax.swing.JButton();
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -30,11 +33,13 @@ public class Panel {
         jButton1.setText("Vehicule");
         jButton1.setFocusable(false);
 
+        //button declaration
         JButton jButton2 = new javax.swing.JButton();
         JButton jButton3 = new javax.swing.JButton();
         JButton jButton4 = new javax.swing.JButton();
         JButton jButton5 = new javax.swing.JButton();
 
+        //Client button
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -43,6 +48,7 @@ public class Panel {
         jButton2.setIcon(client_icon);
 
 
+        //Location button
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -50,6 +56,7 @@ public class Panel {
         jButton3.setFocusable(false);
         jButton3.setIcon(loc_icon);
 
+        //Facture button
         jButton4.setBackground(new java.awt.Color(0, 0, 0));
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -57,6 +64,8 @@ public class Panel {
         jButton4.setFocusable(false);
         jButton4.setIcon(fac_icon);
 
+
+        //Infos button
         jButton5.setBackground(new java.awt.Color(0, 0, 0));
         jButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -67,9 +76,8 @@ public class Panel {
 
 
 
-        headline.setForeground(Color.WHITE);
-        headline.setFont(new Font("Segoe UI Black", 1, 28));
 
+        //Panel settings
         JPanel dashboard = new JPanel();
         dashboard.setBackground(dashcol);
         dashboard.setBounds(0,0,350,576);
