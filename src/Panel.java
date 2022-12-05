@@ -6,12 +6,12 @@ public class Panel {
     {
 
         //icon declaration
-        ImageIcon dash_icon = new ImageIcon("C:\\Users\\bahaa\\IdeaProjects\\location\\src\\Images\\dashboard (1).png");
-        ImageIcon Vech_icon = new ImageIcon("C:\\Users\\bahaa\\IdeaProjects\\location\\src\\Images\\car (2).png");
-        ImageIcon client_icon = new ImageIcon("C:\\Users\\bahaa\\IdeaProjects\\location\\src\\Images\\client.png");
-        ImageIcon loc_icon = new ImageIcon("C:\\Users\\bahaa\\IdeaProjects\\location\\src\\Images\\money (1).png");
-        ImageIcon fac_icon = new ImageIcon("C:\\Users\\bahaa\\IdeaProjects\\location\\src\\Images\\bill.png");
-        ImageIcon info_icon = new ImageIcon("C:\\Users\\bahaa\\IdeaProjects\\location\\src\\Images\\info (1).png");
+        ImageIcon dash_icon = new ImageIcon("src\\Images\\dashboard (1).png");
+        ImageIcon Vech_icon = new ImageIcon("src\\Images\\car (2).png");
+        ImageIcon client_icon = new ImageIcon("src\\Images\\client.png");
+        ImageIcon loc_icon = new ImageIcon("src\\Images\\money (1).png");
+        ImageIcon fac_icon = new ImageIcon("src\\Images\\bill.png");
+        ImageIcon info_icon = new ImageIcon("src\\Images\\info (1).png");
 
 
         //Dashboard
