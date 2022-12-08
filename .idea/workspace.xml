@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="UI (panels)">
-      <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PanelSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelSwitcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel_main.java" afterDir="false" />
     </list>
@@ -141,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670494269938</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="UI (panels)">
+      <created>1670494839923</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670494839923</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
