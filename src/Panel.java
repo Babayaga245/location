@@ -47,6 +47,7 @@ public class Panel {
         jButton2.setText("Client");
         jButton2.setFocusable(false);
         jButton2.setIcon(client_icon);
+        jButton2.addActionListener(e -> PanelSwitcher.Pan_switch(2));
 
 
         //Location button

@@ -13,6 +13,7 @@ public class Panel2 extends JPanel {
         JLabel test = new JLabel();
         test.setText(s);
         main_panel.add(test);
+        main_panel.setVisible(false);
 
 
 
