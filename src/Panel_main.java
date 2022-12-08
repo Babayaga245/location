@@ -67,7 +67,6 @@ public class Panel_main {
 
         jButton10.setText("jButton10");
         JTextField jTextField1 = new JTextField();
-        jTextField1.setText("jTextField1");
        /* jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -77,7 +76,6 @@ public class Panel_main {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Modele");
         JTextField jTextField2 = new JTextField();
-        jTextField2.setText("jTextField1");
        /* jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -88,7 +86,6 @@ public class Panel_main {
         jLabel3.setText("Matricule");
 
         JTextField jTextField3 = new JTextField();
-        jTextField3.setText("jTextField1");
         /*jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
