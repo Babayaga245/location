@@ -35,7 +35,10 @@ public class UI {
         //Panels
         frame.add(dashboard);
         frame.add(Panel_main.Vehicule_panel.main_panel);
+        frame.add(Panel_main.loca_panel.main_panel);
+        frame.add(Panel_main.fac_panel.main_panel);
         frame.add(Panel_main.Client_panel.main_panel);
+        frame.add(Panel_main.info_panel.main_panel);
 
     }
 }

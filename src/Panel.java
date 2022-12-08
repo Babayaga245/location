@@ -57,6 +57,7 @@ public class Panel {
         jButton3.setText("Location");
         jButton3.setFocusable(false);
         jButton3.setIcon(loc_icon);
+        jButton3.addActionListener(e -> PanelSwitcher.Pan_switch(3));
 
         //Facture button
         jButton4.setBackground(new java.awt.Color(0, 0, 0));
@@ -65,6 +66,7 @@ public class Panel {
         jButton4.setText("Facture");
         jButton4.setFocusable(false);
         jButton4.setIcon(fac_icon);
+        jButton4.addActionListener(e -> PanelSwitcher.Pan_switch(4));
 
 
         //Infos button
@@ -74,6 +76,7 @@ public class Panel {
         jButton5.setText("Qui sommes-nous");
         jButton5.setFocusable(false);
         jButton5.setIcon(info_icon);
+        jButton5.addActionListener(e -> PanelSwitcher.Pan_switch(5));
 
 
 
