@@ -32,6 +32,7 @@ public class Panel {
         jButton1.setIcon(Vech_icon);
         jButton1.setText("Vehicule");
         jButton1.setFocusable(false);
+        jButton1.addActionListener(e -> PanelSwitcher.Pan_switch(1));
 
         //button declaration
         JButton jButton2 = new javax.swing.JButton();

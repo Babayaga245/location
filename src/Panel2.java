@@ -1,14 +1,23 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel2 {
+public class Panel2 extends JPanel {
 
-    public static JPanel Panel2_start(Color Main_col) {
+    JPanel main_panel;
 
-        JPanel main_panel = new JPanel();
+    public Panel2(Color Main_col,String s) {
+
+        main_panel = new JPanel();
         main_panel.setBackground(Main_col);
         main_panel.setBounds(350, 0, 674, 576);
+        JLabel test = new JLabel();
+        test.setText(s);
+        main_panel.add(test);
 
-        return main_panel;
+
+
+
     }
+
+
 }

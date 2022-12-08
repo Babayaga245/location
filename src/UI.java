@@ -12,12 +12,14 @@ import java.awt.*;
  */
 public class UI {
 
+    static Panel2 Main_Panel;
+
 
     public static void Start(Color dashcol,Color Main_col) {
 
         //Panels Methods
         JPanel dashboard = Panel.panel_start(dashcol);
-        JPanel Main_Panel = Panel2.Panel2_start(Main_col);
+        Main_Panel = new Panel2(Main_col,"Vehicule");
 
         //Main Frame
         JFrame frame = new JFrame();
@@ -28,8 +30,10 @@ public class UI {
         frame.setSize(1024, 576);
         frame.setVisible(true);
 
+
+
         //Panels
         frame.add(dashboard);
-        frame.add(Main_Panel);
+        frame.add(Main_Panel.main_panel);
     }
 }
