@@ -27,7 +27,7 @@ public class UI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setLayout(null);
-        frame.setSize(1104, 576);
+        frame.setSize(1065, 576);
         frame.setVisible(true);
 
 
