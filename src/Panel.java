@@ -2,6 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Panel {
+
+    public static JButton jButton1;
+    public static JButton jButton2;
+    public static JButton jButton3;
+    public static JButton jButton4;
+    public static JButton jButton5;
+
     public static JPanel panel_start(Color dashcol)
     {
 
@@ -25,7 +32,7 @@ public class Panel {
         headline.setFont(new Font("Segoe UI Black", 1, 28));
 
         //vehicule button
-        JButton jButton1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -35,10 +42,10 @@ public class Panel {
         jButton1.addActionListener(e -> PanelSwitcher.Pan_switch(1));
 
         //button declaration
-        JButton jButton2 = new javax.swing.JButton();
-        JButton jButton3 = new javax.swing.JButton();
-        JButton jButton4 = new javax.swing.JButton();
-        JButton jButton5 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         //Client button
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
