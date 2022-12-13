@@ -13,11 +13,12 @@ public class Main {
         //String username="root";
         //String password="";
 
-
-
+        //test ajout
+        client c = new client(11111111,"testtest",11111111);
+        client.deleteClient(c);
 
         //ll coleur louwel mta3 dashboard wl color lekher mta3 ll panel lokhra
-        UI.Start(Color.red,Color.white);
+        //UI.Start(Color.red,Color.white);
 
 
 
