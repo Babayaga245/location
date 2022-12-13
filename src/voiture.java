@@ -88,4 +88,28 @@ public class voiture {
             //test
         }
     }
+    public static void deleteCar(voiture c){
+        String url="jdbc:mysql://localhost:3306/location";
+        String username="root";
+        String password="";
+        try {
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+
+            Connection connection = DriverManager.getConnection(url,username,password);
+            Statement statement=connection.createStatement();
+            String sql = "delete from voiture  where(matricule=" + c.GetMat()+");";
+            statement = connection.createStatement();
+            int i = statement.executeUpdate(sql);
+            if (i > 0) {
+                System.out.println("ROW DELETED");
+            } else {
+                System.out.println("ROW NOT DELETED");
+            }
+            connection.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+            //test
+        }
+    }
 }
