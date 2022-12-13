@@ -4,10 +4,11 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="UI (panels)">
+    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="Better Ui system">
+      <change afterPath="$PROJECT_DIR$/src/Images/Baha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/Rayen.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PanelSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelSwitcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel_main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670708947320</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Better Ui system">
+      <created>1670714714209</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670714714209</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +217,7 @@
     <MESSAGE value="UI (zedt comments bch tefhm )" />
     <MESSAGE value="UI test" />
     <MESSAGE value="UI (panels)" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI (panels)" />
+    <MESSAGE value="Better Ui system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better Ui system" />
   </component>
 </project>
