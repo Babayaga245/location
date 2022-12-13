@@ -494,6 +494,7 @@ public class Panel_main {
                                         .addComponent(jLabel3))
                                 .addGap(145, 145, 145))
         );
+
 */
 
 
