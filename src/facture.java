@@ -32,7 +32,7 @@ public class facture {
         this.date_deb=date_deb;
         this.num_days=num_days;
         this.nomprenom=GetNomPrenom(numpermis);
-        this.date_fin=GetDateFin(date_deb,num_days);
+        //this.date_fin=GetDateFin(date_deb,num_days);
         this.prix=GetPrix(matricule,num_days);
     }
     private static String GetNomPrenom(int numpermis){
@@ -45,9 +45,9 @@ public class facture {
         }
         return "";
     }
-    private  static  String GetDateFin(String date_deb,int num_days){
+    //private  static  String GetDateFin(String date_deb,int num_days){
 
-    }
+    //}
     private static int GetPrix(int matricule,int num_days){
         ArrayList<voiture> voitures = new ArrayList<>();
         voitures=voiture.GetCarArray();
