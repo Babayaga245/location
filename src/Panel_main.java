@@ -221,7 +221,8 @@ public class Panel_main {
 
 
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            client Client_arr[] = client.Getclientrray(0) ;
+            int n = 0;
+            client Client_arr[] = client.Getclientrray(n) ;
             Object rowData[] = new Object[3];
             for(int i = 0; i < Client_arr.length; i++)
             {
