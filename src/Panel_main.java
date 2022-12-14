@@ -122,6 +122,7 @@ public class Panel_main {
 
         JButton jButton11 = new JButton();
         jButton11.setText("Ajouter");
+        jButton11.addActionListener(e -> vehicule_ui_add());
 
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(Vehicule_panel.main_panel);
