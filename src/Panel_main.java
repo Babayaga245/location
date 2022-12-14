@@ -10,6 +10,14 @@ public class Panel_main {
     static Panel2 fac_panel;
     static Panel2 info_panel;
 
+    public static client Client;
+
+    static JTextField jTextField3 ;
+    static JTextField jTextField4;
+    static JTextField jTextField5;
+
+
+
     private static void Vehicule_panel_init()
     {
 
@@ -175,7 +183,7 @@ public class Panel_main {
     }
 
 
-    private static void Client_panel_init()
+    public static void Client_panel_init()
     {
 
 
@@ -186,7 +194,7 @@ public class Panel_main {
         jLabel5.setText("Nom et Prenom de client");
 
 
-        JTextField jTextField3 = new JTextField();
+        jTextField3 = new JTextField();
        /* jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -220,7 +228,7 @@ public class Panel_main {
 
 
 
-            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            /*DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             int n = 0;
             client Client_arr[] = client.Getclientrray(n) ;
             Object rowData[] = new Object[3];
@@ -230,7 +238,7 @@ public class Panel_main {
                 rowData[1] = Client_arr[i].GetNumpermis();
                 rowData[2] = Client_arr[i].GetTel();
                 model.addRow(rowData);
-            }
+            }*/
 
 
 
@@ -246,7 +254,7 @@ public class Panel_main {
             jTable1.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        JTextField jTextField4 = new JTextField();
+        jTextField4 = new JTextField();
         /*jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -257,7 +265,7 @@ public class Panel_main {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Num Permis");
 
-        JTextField jTextField5 = new JTextField();
+        jTextField5 = new JTextField();
         /*jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -371,6 +379,13 @@ public class Panel_main {
 
 
 
+    }
+
+    public static void client_ui_add()
+    {
+        String c = jTextField5.getText();
+        Client = new client(Integer.parseInt(jTextField4.getText()),jTextField3.getText(),Integer.parseInt(jTextField5.getText()));
+        client.addClient(Client);
     }
 
 
