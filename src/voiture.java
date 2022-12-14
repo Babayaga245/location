@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class voiture {
     private int matricule;
@@ -45,8 +46,8 @@ public class voiture {
     public boolean GetState(){
         return(this.state);
     }
-    public static voiture[] GetCarArray(int n){
-        voiture cars[]=new voiture[200];
+    public static ArrayList<voiture> GetCarArray(){
+        ArrayList<voiture> cars=new ArrayList<>();
         String url="jdbc:mysql://localhost:3306/location";
         String username="root";
         String password="";

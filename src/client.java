@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class client {
     private int numpermis;
@@ -75,7 +77,6 @@ public class client {
             Statement statement=connection.createStatement();
             String sql = "insert into client (numpermis,nomprenom,tel) values('" + c.GetNumpermis() + "','"
                     + c.GetNomprenom() + "','" + c.GetTel()  + "');";
-            System.out.println(sql);
             statement = connection.createStatement();
             int i = statement.executeUpdate(sql);
             if (i > 0) {
@@ -113,5 +114,15 @@ public class client {
             System.out.println(e);
             //test
         }
+    }
+    public static boolean clientCheck(String nomprenom,String numpermis,String numtel){
+        Pattern IntPattern = Pattern.compile("[^0-9]");
+        Matcher PermisMatcher = IntPattern.matcher(numpermis);
+        Matcher TelMatcher = IntPattern.matcher(numtel);
+        boolean perm = PermisMatcher.find();
+        boolean tel = TelMatcher.find();
+
+        if (perm || tel || nomprenom.isEmpty() || numpermis.isEmpty() || numtel.isEmpty()) {  return true;}
+        return false;
     }
 }

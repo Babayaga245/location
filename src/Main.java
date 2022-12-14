@@ -20,9 +20,12 @@ public class Main {
         //client.deleteClient(c);
 
         //ll coleur louwel mta3 dashboard wl color lekher mta3 ll panel lokhra
-        UI.Start(Color.red,Color.white);
+        //UI.Start(Color.red,Color.white);
 
-
+          if (client.clientCheck("rayen zaalouni","14589963","14")){
+              System.out.println("false");
+          }
+          else  System.out.println("true");
 
 
         //try {
