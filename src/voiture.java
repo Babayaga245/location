@@ -59,8 +59,7 @@ public class voiture {
             ResultSet resultSet=statement.executeQuery("select * from voiture");
             while (resultSet.next()){
                 voiture v = new voiture(resultSet.getInt(1),resultSet.getString(2),resultSet.getInt(3),resultSet.getBoolean(4));
-                cars[n]=v;
-                n++;
+                cars.add(v);
             }
 
             connection.close();
