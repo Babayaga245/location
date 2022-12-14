@@ -4,12 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="added afficher(cars+clients)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/facture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/voiture.java" afterDir="false" />
-    </list>
+    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="added afficher(cars+clients)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670982911932</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added afficher(cars+clients)">
+      <created>1670987586264</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670987586264</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +248,7 @@
     <MESSAGE value="UI (panels)" />
     <MESSAGE value="Better Ui system" />
     <MESSAGE value="UI kmel" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI kmel" />
+    <MESSAGE value="added afficher(cars+clients)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added afficher(cars+clients)" />
   </component>
 </project>
