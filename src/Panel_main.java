@@ -184,6 +184,20 @@ public class Panel_main {
     }
 
 
+    private static void update_client()
+    {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        ArrayList<client> Client_arr=client.GetclientArray();
+        Object rowData[] = new Object[3];
+        for(int i = 0; i < Client_arr.size(); i++)
+        {
+            rowData[0] = Client_arr.get(i).GetNomprenom();
+            rowData[1] = Client_arr.get(i).GetNumpermis();
+            rowData[2] = Client_arr.get(i).GetTel();
+            model.addRow(rowData);
+        }
+    }
+
     public static void Client_panel_init()
     {
 
@@ -226,19 +240,10 @@ public class Panel_main {
 
 
 
+        update_client();
 
 
 
-            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            ArrayList<client> Client_arr=client.GetclientArray();
-            Object rowData[] = new Object[3];
-            for(int i = 0; i < Client_arr.size(); i++)
-            {
-                rowData[0] = Client_arr.get(i).GetNomprenom();
-                rowData[1] = Client_arr.get(i).GetNumpermis();
-                rowData[2] = Client_arr.get(i).GetTel();
-                model.addRow(rowData);
-            }
 
 
 
@@ -387,6 +392,7 @@ public class Panel_main {
         String c = jTextField5.getText();
         Client = new client(Integer.parseInt(jTextField4.getText()),jTextField3.getText(),Integer.parseInt(jTextField5.getText()));
         client.addClient(Client);
+        update_client();
     }
 
 
