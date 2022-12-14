@@ -102,11 +102,13 @@ public class Panel_main {
         jTextField1_voiture = new JTextField();
 
 
+
         JLabel jLabel2 = new JLabel();
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Modele");
 
         jTextField2_voiture = new JTextField();
+
 
         JLabel jLabel3 = new JLabel();
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -114,6 +116,7 @@ public class Panel_main {
 
 
         jTextField3_voiture = new JTextField();
+
 
 
         JLabel jLabel4 = new JLabel();
@@ -218,7 +221,7 @@ public class Panel_main {
             JOptionPane.showMessageDialog(null,"Saisie des donnes valid !","ERREUR",JOptionPane.ERROR_MESSAGE);
         }
         else {
-            Voiture = new voiture(Integer.parseInt(jTextField1_voiture.getText()), jTextField2_voiture.getText(), Integer.parseInt(jTextField3_voiture.getText()),false);
+            Voiture = new voiture(Integer.parseInt(jTextField2_voiture.getText()), jTextField1_voiture.getText(), Integer.parseInt(jTextField3_voiture.getText()),false);
             voiture.addCar(Voiture);
             Object obj[] = {Integer.parseInt(jTextField1_voiture.getText()), jTextField2_voiture.getText(), Integer.parseInt(jTextField3_voiture.getText())};
             model.addRow(obj);
