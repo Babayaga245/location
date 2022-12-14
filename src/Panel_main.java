@@ -14,6 +14,10 @@ public class Panel_main {
     
     public static voiture Voiture;
     static JTable jTable1_voiture;
+    static JTextField jTextField1_voiture;
+    static JTextField jTextField2_voiture;
+    static JTextField jTextField3_voiture;
+    
 
     
     
@@ -58,8 +62,8 @@ public class Panel_main {
         Object rowData[] = new Object[4];
         for(int i = 0; i < voiture_arr.size(); i++)
         {
-            rowData[0] = voiture_arr.get(i).GetMat();
-            rowData[1] = voiture_arr.get(i).GetMod();
+            rowData[0] = voiture_arr.get(i).GetMod();
+            rowData[1] = voiture_arr.get(i).GetMat();
             rowData[2] = voiture_arr.get(i).GetPrix();
             rowData[3] = voiture_arr.get(i).GetState();
 
@@ -95,21 +99,21 @@ public class Panel_main {
         jButton10.setText("Mise a jour");
 
 
-        JTextField jTextField1 = new JTextField();
+        jTextField1_voiture = new JTextField();
 
 
         JLabel jLabel2 = new JLabel();
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Modele");
 
-        JTextField jTextField2 = new JTextField();
+        jTextField2_voiture = new JTextField();
 
         JLabel jLabel3 = new JLabel();
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Matricule");
 
 
-        JTextField jTextField3 = new JTextField();
+        jTextField3_voiture = new JTextField();
 
 
         JLabel jLabel4 = new JLabel();
@@ -128,11 +132,11 @@ public class Panel_main {
                                 .addGap(12, 12, 12)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField1_voiture, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField2_voiture, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField3_voiture, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addGap(31, 31, 31)
                                                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -153,15 +157,15 @@ public class Panel_main {
                                 .addGap(50, 50, 50)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(7, 7, 7)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField1_voiture, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(50, 50, 50)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(7, 7, 7)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField2_voiture, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(50, 50, 50)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(7, 7, 7)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField3_voiture, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(33, 33, 33)
                                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel4Layout.createSequentialGroup()
@@ -202,6 +206,22 @@ public class Panel_main {
 
 
 
+
+    }
+
+
+    public static void vehicule_ui_add()
+    {
+        DefaultTableModel model = (DefaultTableModel) jTable1_voiture.getModel();
+        if (client.clientCheck(jTextField1_voiture.getText(),jTextField2_voiture.getText(),jTextField3_voiture.getText())) {
+            JOptionPane.showMessageDialog(null,"Saisie des donnes valid !","ERREUR",JOptionPane.ERROR_MESSAGE);
+        }
+        else {
+            Voiture = new voiture(Integer.parseInt(jTextField1_voiture.getText()), jTextField2_voiture.getText(), Integer.parseInt(jTextField3_voiture.getText()),false);
+            voiture.addCar(Voiture);
+            Object obj[] = {Integer.parseInt(jTextField1_voiture.getText()), jTextField2_voiture.getText(), Integer.parseInt(jTextField3_voiture.getText())};
+            model.addRow(obj);
+        }
 
     }
 
@@ -406,6 +426,8 @@ public class Panel_main {
         }
 
     }
+    
+    
 
 
     private static void Loc_panel_init()

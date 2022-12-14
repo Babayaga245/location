@@ -22,6 +22,9 @@ public class voiture {
         this.prix=prix;
         this.state=state;
     }
+
+
+
     public void SetMat(int matricule){
         this.matricule=matricule;
     }
