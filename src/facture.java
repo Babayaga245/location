@@ -2,24 +2,59 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class facture {
     private int numpermis;
     private int matricule;
     private String date_deb;
     private int num_days;
+    private String date_fin;
+    private String nomprenom;
+    private String modele;
+    private int prix;
+
     public facture(){
         this.numpermis=0;
         this.matricule=0;
         this.date_deb=null;
         this.num_days=0;
+        this.date_fin=null;
+        this.nomprenom=null;
+        this.modele=null;
+        this.prix=0;
 
     }
     public facture(int numpermis,int matricule,String date_deb,int num_days){
+
         this.numpermis=numpermis;
         this.matricule=matricule;
         this.date_deb=date_deb;
         this.num_days=num_days;
+        this.nomprenom=GetNomPrenom(numpermis);
+        this.date_fin=GetDateFin(date_deb,num_days);
+        this.prix=GetPrix(matricule,num_days);
+    }
+    private static String GetNomPrenom(int numpermis){
+        ArrayList<client> clients = new ArrayList<>();
+        clients = client.GetclientArray();
+        for(int i=0;i<clients.size();i++){
+            if (clients.get(i).GetNumpermis()==numpermis){
+                return(clients.get(i).GetNomprenom());
+            }
+        }
+    }
+    private  static  String GetDateFin(String date_deb,int num_days){
+
+    }
+    private static int GetPrix(int matricule,int num_days){
+        ArrayList<voiture> voitures = new ArrayList<>();
+        voitures=voiture.GetCarArray();
+        for(int i=0;i<voitures.size();i++){
+            if(voitures.get(i).GetMat()==matricule){
+                return(voitures.get(i).GetPrix()*num_days);
+            }
+        }
     }
     public int GetNumpermis(){
         return(this.numpermis);

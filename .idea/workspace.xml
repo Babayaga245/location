@@ -7,7 +7,6 @@
     <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="UI kmel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel_main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/voiture.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,14 +224,7 @@
       <option name="project" value="LOCAL" />
       <updated>1670983058458</updated>
     </task>
-    <task id="LOCAL-00022" summary="UI kmel">
-      <created>1670986336174</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1670986336174</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
