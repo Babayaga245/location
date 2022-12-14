@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 public class Panel_main {
@@ -209,6 +210,32 @@ public class Panel_main {
                 return canEdit [columnIndex];
             }
         });
+
+        Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+        };
+
+
+
+
+
+
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            client Client_arr[] = client.Getclientrray(0) ;
+            Object rowData[] = new Object[3];
+            for(int i = 0; i < Client_arr.length; i++)
+            {
+                rowData[0] = Client_arr[i].GetNomprenom();
+                rowData[1] = Client_arr[i].GetNumpermis();
+                rowData[2] = Client_arr[i].GetTel();
+                model.addRow(rowData);
+            }
+
+
+
+
+
+
 
         JScrollPane jScrollPane1 = new JScrollPane();
         jScrollPane1.setViewportView(jTable1);
