@@ -43,6 +43,7 @@ public class facture {
                 return(clients.get(i).GetNomprenom());
             }
         }
+        return "";
     }
     private  static  String GetDateFin(String date_deb,int num_days){
 
@@ -55,6 +56,7 @@ public class facture {
                 return(voitures.get(i).GetPrix()*num_days);
             }
         }
+        return 0;
     }
     public int GetNumpermis(){
         return(this.numpermis);

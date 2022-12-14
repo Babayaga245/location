@@ -4,7 +4,9 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="added afficher(cars+clients)" />
+    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="added afficher(cars+clients)">
+      <change beforePath="$PROJECT_DIR$/src/facture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facture.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670987586264</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added afficher(cars+clients)">
+      <created>1670987705130</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670987705130</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
