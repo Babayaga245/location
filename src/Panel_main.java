@@ -1,6 +1,7 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Panel_main {
 
@@ -228,17 +229,16 @@ public class Panel_main {
 
 
 
-            /*DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            int n = 0;
-            client Client_arr[] = client.Getclientrray(n) ;
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            ArrayList<client> Client_arr=client.GetclientArray();
             Object rowData[] = new Object[3];
-            for(int i = 0; i < Client_arr.length; i++)
+            for(int i = 0; i < Client_arr.size(); i++)
             {
-                rowData[0] = Client_arr[i].GetNomprenom();
-                rowData[1] = Client_arr[i].GetNumpermis();
-                rowData[2] = Client_arr[i].GetTel();
+                rowData[0] = Client_arr.get(i).GetNomprenom();
+                rowData[1] = Client_arr.get(i).GetNumpermis();
+                rowData[2] = Client_arr.get(i).GetTel();
                 model.addRow(rowData);
-            }*/
+            }
 
 
 

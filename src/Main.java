@@ -1,21 +1,23 @@
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        int n=0;
-        //client[] arr = Afficher.clients(n);
-        for(int i=0;i<=n;i++)
-        {
-            //System.out.println("num permis ="+arr[i].GetNumpermis()+"nom ="+arr[i].GetNom()+"prenom="+arr[i].GetPrenom()+"adresse="+arr[i].GetAdresse()+"tel="+arr[i].GetTel());
-        }
+        //ArrayList<client> arr = client.GetclientArray();
+        //System.out.println(arr.size());
+        //for(int i=0;i<arr.size();i++)
+        //{
+            //System.out.println("test"+i);
+            //System.out.println("num permis ="+arr.get(i).GetNumpermis()+" nom ="+arr.get(i).GetNomprenom()+" tel="+arr.get(i).GetTel());
+        //}
 
         //String url="jdbc:mysql://localhost:3306/location";
         //String username="root";
         //String password="";
 
         //test ajout
-       /* client c = new client(11111111,"testtest",11111111);
-        client.deleteClient(c);*/
+        //client c = new client(11111111,"testtest",11111111);
+        //client.deleteClient(c);
 
         //ll coleur louwel mta3 dashboard wl color lekher mta3 ll panel lokhra
         UI.Start(Color.red,Color.white);

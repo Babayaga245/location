@@ -2,42 +2,40 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 
-public class client {
+public class facture {
     private int numpermis;
-    private String nomprenom;
-    private int tel;
-    public client(){
-        numpermis= Integer.parseInt(null);
-        nomprenom=null;
-        tel= Integer.parseInt(null);
+    private int matricule;
+    private String date_deb;
+    private int num_days;
+    public facture(){
+        this.numpermis=0;
+        this.matricule=0;
+        this.date_deb=null;
+        this.num_days=0;
+
     }
-    public client(int numpermis,String nomprenom, int tel){
+    public facture(int numpermis,int matricule,String date_deb,int num_days){
         this.numpermis=numpermis;
-        this.nomprenom=nomprenom;
-        this.tel=tel;
-    }
-    public void SetNumpermis(int numpermis){
-        this.numpermis=numpermis;
+        this.matricule=matricule;
+        this.date_deb=date_deb;
+        this.num_days=num_days;
     }
     public int GetNumpermis(){
         return(this.numpermis);
     }
-    public void SetNomprenom(String nom){
-        this.nomprenom=nom;
+    public int GetMatricule(){
+        return(this.matricule);
     }
-    public String GetNomprenom(){
-        return(this.nomprenom);
+    public String GetDatedeb(){
+        return(this.date_deb);
     }
-    public void SetTel(int tel){
-        this.tel=tel;
+    public int GetNumdays(){
+        return(this.num_days);
     }
-    public int GetTel(){
-        return(this.tel);
-    }
-    public static ArrayList<client> GetclientArray(){
-        ArrayList<client> arr = new ArrayList<client>();
+
+    public static facture[] GetfacArray(int n){
+        facture cars[]=new facture[200];
         String url="jdbc:mysql://localhost:3306/location";
         String username="root";
         String password="";
@@ -46,12 +44,11 @@ public class client {
 
             Connection connection = DriverManager.getConnection(url,username,password);
             Statement statement=connection.createStatement();
-            ResultSet resultSet=statement.executeQuery("select * from client");
+            ResultSet resultSet=statement.executeQuery("select * from facture");
             while (resultSet.next()){
-
-                client v = new client(resultSet.getInt(1),resultSet.getString(2),resultSet.getInt(3));
-                arr.add(v);
-
+                facture v = new facture(resultSet.getInt(1),resultSet.getInt(2),resultSet.getString(3),resultSet.getInt(4));
+                cars[n]=v;
+                n++;
             }
 
             connection.close();
@@ -61,10 +58,10 @@ public class client {
             //test
         }
 
-        return(arr);
+        return(cars);
 
     }
-    public static void addClient(client c){
+    public static void addFac(facture c){
         String url="jdbc:mysql://localhost:3306/location";
         String username="root";
         String password="";
@@ -73,9 +70,8 @@ public class client {
 
             Connection connection = DriverManager.getConnection(url,username,password);
             Statement statement=connection.createStatement();
-            String sql = "insert into client (numpermis,nomprenom,tel) values('" + c.GetNumpermis() + "','"
-                    + c.GetNomprenom() + "','" + c.GetTel()  + "');";
-            System.out.println(sql);
+            String sql = "insert into facture  values('" + c.GetNumpermis() + "','"
+                    + c.GetMatricule() + "','" + c.GetDatedeb()  + "','" + c.GetNumdays()  + "');";
             statement = connection.createStatement();
             int i = statement.executeUpdate(sql);
             if (i > 0) {
@@ -89,8 +85,9 @@ public class client {
             System.out.println(e);
             //test
         }
+
     }
-    public static void deleteClient(client c){
+    public static void deletefacs(){
         String url="jdbc:mysql://localhost:3306/location";
         String username="root";
         String password="";
@@ -99,13 +96,13 @@ public class client {
 
             Connection connection = DriverManager.getConnection(url,username,password);
             Statement statement=connection.createStatement();
-            String sql = "delete from client  where(numpermis=" + c.GetNumpermis()+");";
+            String sql = "delete from facture; ";
             statement = connection.createStatement();
             int i = statement.executeUpdate(sql);
             if (i > 0) {
-                System.out.println("ROW DELETED");
+                System.out.println("ALL ROWs DELETED");
             } else {
-                System.out.println("ROW NOT DELETED");
+                System.out.println(" NOT DELETED");
             }
             connection.close();
         }

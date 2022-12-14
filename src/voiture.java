@@ -5,29 +5,32 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class voiture {
-    private String matricule;
+    private int matricule;
     private String modele;
-    private float prix;
+    private int prix;
+    private boolean state;
     public voiture(){
-        matricule=null;
+        matricule= Integer.parseInt(null);
         modele=null;
-        prix=0;
+        prix= Integer.parseInt(null);
+        state=false;
     }
-    public voiture(String matricule,String modele,float prix) {
+    public voiture(int matricule,String modele,int prix,boolean state) {
         this.matricule=matricule;
         this.modele=modele;
         this.prix=prix;
+        this.state=state;
     }
-    public void SetMat(String matricule){
+    public void SetMat(int matricule){
         this.matricule=matricule;
     }
-    public String GetMat(){
+    public int GetMat(){
         return(this.matricule);
     }
     public void SetPrix(int prix){
         this.prix=prix;
     }
-    public float GetPrix(){
+    public int GetPrix(){
         return(this.prix);
     }
     public void SetMod(String modele){
@@ -35,6 +38,12 @@ public class voiture {
     }
     public String GetMod(){
         return(this.modele);
+    }
+    public void SetState(boolean state){
+        this.state=state;
+    }
+    public boolean GetState(){
+        return(this.state);
     }
     public static voiture[] GetCarArray(int n){
         voiture cars[]=new voiture[200];
@@ -48,7 +57,7 @@ public class voiture {
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery("select * from voiture");
             while (resultSet.next()){
-                voiture v = new voiture(resultSet.getString(1),resultSet.getString(2),resultSet.getFloat(3));
+                voiture v = new voiture(resultSet.getInt(1),resultSet.getString(2),resultSet.getInt(3),resultSet.getBoolean(4));
                 cars[n]=v;
                 n++;
             }
@@ -72,8 +81,8 @@ public class voiture {
 
             Connection connection = DriverManager.getConnection(url,username,password);
             Statement statement=connection.createStatement();
-            String sql = "insert into voiture (matricule,modele,prix) values('" + c.GetMat() + "','"
-                    + c.GetMod() + "','" + c.GetPrix()  + "');";
+            String sql = "insert into voiture (matricule,modele,prix,state) values('" + c.GetMat() + "','"
+                    + c.GetMod() + "','" + c.GetPrix()  +"','" + c.GetState()  + "');";
             statement = connection.createStatement();
             int i = statement.executeUpdate(sql);
             if (i > 0) {
@@ -104,6 +113,30 @@ public class voiture {
                 System.out.println("ROW DELETED");
             } else {
                 System.out.println("ROW NOT DELETED");
+            }
+            connection.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+            //test
+        }
+    }
+    public static void modifyCar(voiture c){
+        String url="jdbc:mysql://localhost:3306/location";
+        String username="root";
+        String password="";
+        try {
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+
+            Connection connection = DriverManager.getConnection(url,username,password);
+            Statement statement= connection.createStatement();
+            String sql = "update voiture set modele='"+c.GetMod()+"',prix="+c.GetPrix()+ "',state= ' "+c.GetPrix()+"  where matricule=" + c.GetMat()+";";
+            statement = connection.createStatement();
+            int i = statement.executeUpdate(sql);
+            if (i > 0) {
+                System.out.println("ROW MODIFIED");
+            } else {
+                System.out.println("ROW NOT MODIFIED");
             }
             connection.close();
         }
