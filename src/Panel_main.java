@@ -11,13 +11,18 @@ public class Panel_main {
     static Panel2 fac_panel;
     static Panel2 info_panel;
 
+    
+    public static voiture Voiture;
+    static JTable jTable1_voiture;
+
+    
+    
+    
     public static client Client;
-
-    static JTextField jTextField3 ;
-    static JTextField jTextField4;
-    static JTextField jTextField5;
-
-    static JTable jTable1;
+    static JTextField jTextField3_client ;
+    static JTextField jTextField4_client;
+    static JTextField jTextField5_client;
+    static JTable jTable1_client;
 
 
 
@@ -28,9 +33,9 @@ public class Panel_main {
 
 
 
-        JTable jTable1 = new javax.swing.JTable();
+        jTable1_voiture = new javax.swing.JTable();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1_voiture.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
 
                 },
@@ -48,17 +53,32 @@ public class Panel_main {
         });
 
 
+        DefaultTableModel model = (DefaultTableModel) jTable1_voiture.getModel();
+        ArrayList<voiture> voiture_arr=voiture.GetCarArray();
+        Object rowData[] = new Object[4];
+        for(int i = 0; i < voiture_arr.size(); i++)
+        {
+            rowData[0] = voiture_arr.get(i).GetMat();
+            rowData[1] = voiture_arr.get(i).GetMod();
+            rowData[2] = voiture_arr.get(i).GetPrix();
+            rowData[3] = voiture_arr.get(i).GetState();
 
-         JScrollPane sp = new JScrollPane(jTable1);
+            model.addRow(rowData);
 
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
+        }
+
+
+
+         JScrollPane sp = new JScrollPane(jTable1_voiture);
+
+        if (jTable1_voiture.getColumnModel().getColumnCount() > 0) {
+            jTable1_voiture.getColumnModel().getColumn(0).setResizable(false);
+            jTable1_voiture.getColumnModel().getColumn(1).setResizable(false);
+            jTable1_voiture.getColumnModel().getColumn(2).setResizable(false);
+            jTable1_voiture.getColumnModel().getColumn(3).setResizable(false);
         }
         Vehicule_panel.main_panel.add(sp);
-        jTable1.setBounds(500,10,500,500);
+        jTable1_voiture.setBounds(500,10,500,500);
 
 
 
@@ -197,15 +217,15 @@ public class Panel_main {
         jLabel5.setText("Nom et Prenom de client");
 
 
-        jTextField3 = new JTextField();
+        jTextField3_client = new JTextField();
        /* jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });*/
 
-        jTable1 = new JTable();
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1_client  = new JTable();
+        jTable1_client.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
 
                 },
@@ -231,7 +251,7 @@ public class Panel_main {
 
 
 
-            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            DefaultTableModel model = (DefaultTableModel) jTable1_client.getModel();
             ArrayList<client> Client_arr=client.GetclientArray();
             Object rowData[] = new Object[3];
             for(int i = 0; i < Client_arr.size(); i++)
@@ -250,14 +270,14 @@ public class Panel_main {
 
 
         JScrollPane jScrollPane1 = new JScrollPane();
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane1.setViewportView(jTable1_client);
+        if (jTable1_client.getColumnModel().getColumnCount() > 0) {
+            jTable1_client.getColumnModel().getColumn(0).setResizable(false);
+            jTable1_client.getColumnModel().getColumn(1).setResizable(false);
+            jTable1_client.getColumnModel().getColumn(2).setResizable(false);
         }
 
-        jTextField4 = new JTextField();
+        jTextField4_client = new JTextField();
         /*jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -268,7 +288,7 @@ public class Panel_main {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Num Permis");
 
-        jTextField5 = new JTextField();
+        jTextField5_client = new JTextField();
         /*jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -322,7 +342,7 @@ public class Panel_main {
                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                        .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jTextField3_client, javax.swing.GroupLayout.Alignment.LEADING)
                                                                         .addGroup(jPanel4Layout.createSequentialGroup()
                                                                                 .addGap(0, 14, Short.MAX_VALUE)
                                                                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -330,10 +350,10 @@ public class Panel_main {
                                                                 .addGap(36, 36, 36))
                                                         .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                        .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jTextField5_client, javax.swing.GroupLayout.Alignment.LEADING)
                                                                         .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                                                                         .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                                                        .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING))
+                                                                        .addComponent(jTextField4_client, javax.swing.GroupLayout.Alignment.LEADING))
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(92, 92, 92))
@@ -346,15 +366,15 @@ public class Panel_main {
                                                 .addGap(72, 72, 72)
                                                 .addComponent(jLabel5)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jTextField3_client, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(27, 27, 27)
                                                 .addComponent(jLabel6)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jTextField4_client, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(28, 28, 28)
                                                 .addComponent(jLabel7)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jTextField5_client, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(80, 80, 80)
                                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
@@ -374,12 +394,17 @@ public class Panel_main {
 
     public static void client_ui_add()
     {
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        String c = jTextField5.getText();
-        Client = new client(Integer.parseInt(jTextField4.getText()),jTextField3.getText(),Integer.parseInt(jTextField5.getText()));
-        client.addClient(Client);
-        Object obj[] = {Integer.parseInt(jTextField4.getText()),jTextField3.getText(),Integer.parseInt(jTextField5.getText())};
-        model.addRow(obj);
+        DefaultTableModel model = (DefaultTableModel) jTable1_client.getModel();
+        if (client.clientCheck(jTextField4_client.getText(),jTextField3_client.getText(),jTextField5_client.getText())) {
+            JOptionPane.showMessageDialog(null,"Saisie des donnes valid !","ERREUR",JOptionPane.ERROR_MESSAGE);
+        }
+        else {
+            Client = new client(Integer.parseInt(jTextField4_client.getText()), jTextField3_client.getText(), Integer.parseInt(jTextField5_client.getText()));
+            client.addClient(Client);
+            Object obj[] = {Integer.parseInt(jTextField4_client.getText()), jTextField3_client.getText(), Integer.parseInt(jTextField5_client.getText())};
+            model.addRow(obj);
+        }
+
     }
 
 
