@@ -47,7 +47,7 @@ public class PanelSwitcher {
             case 4 :
                 Panel_main.fac_panel.main_panel.setVisible((true));
                 Panel.jButton4.setBackground(click_color);
-                if(current_panel != Panel_main.Vehicule_panel){
+                if(current_panel != Panel_main.fac_panel){
                 current_panel.main_panel.setVisible(false);
                 current_button.setBackground(new java.awt.Color(0, 0, 0));
                 current_button = Panel.jButton4;
@@ -56,7 +56,7 @@ public class PanelSwitcher {
             case 5 :
                 Panel_main.info_panel.main_panel.setVisible((true));
                 Panel.jButton5.setBackground(click_color);
-                if(current_panel != Panel_main.Vehicule_panel){
+                if(current_panel != Panel_main.info_panel){
                 current_panel.main_panel.setVisible(false);
                 current_button.setBackground(new java.awt.Color(0, 0, 0));
                 current_button = Panel.jButton5;
