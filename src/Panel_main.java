@@ -278,6 +278,7 @@ public class Panel_main {
 
         JButton jButton1 = new JButton();
         jButton1.setText("Ajouter");
+        jButton1.addActionListener(e -> client_ui_add());
        /* jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
