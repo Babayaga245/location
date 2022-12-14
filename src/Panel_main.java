@@ -16,6 +16,7 @@ public class Panel_main {
     static JTextField jTextField3 ;
     static JTextField jTextField4;
     static JTextField jTextField5;
+    static JTable jTable1;
 
 
 
@@ -216,7 +217,7 @@ public class Panel_main {
             }
         });*/
 
-        JTable jTable1 = new JTable();
+        jTable1 = new JTable();
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
 
