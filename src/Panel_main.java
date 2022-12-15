@@ -230,6 +230,7 @@ public class Panel_main {
     }
 
 
+
     public static void Client_panel_init()
     {
 
@@ -419,8 +420,8 @@ public class Panel_main {
     public static void client_ui_add()
     {
         DefaultTableModel model = (DefaultTableModel) jTable1_client.getModel();
-        if (client.clientCheck(jTextField4_client.getText(),jTextField3_client.getText(),jTextField5_client.getText())) {
-            JOptionPane.showMessageDialog(null,"Saisie des donnes valid !","ERREUR",JOptionPane.ERROR_MESSAGE);
+        if (client.clientCheck(jTextField3_client.getText(),jTextField4_client.getText(),jTextField5_client.getText())) {
+            JOptionPane.showMessageDialog(null,"Saisie des donnes valid test !","ERREUR",JOptionPane.ERROR_MESSAGE);
         }
         else {
             Client = new client(Integer.parseInt(jTextField4_client.getText()), jTextField3_client.getText(), Integer.parseInt(jTextField5_client.getText()));

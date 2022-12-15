@@ -46,8 +46,9 @@ public class voiture {
     public void SetState(boolean state){
         this.state=state;
     }
-    public boolean GetState(){
-        return(this.state);
+    public int GetState(){
+        if (state) {return 1;}
+        else return 0;
     }
     public static ArrayList<voiture> GetCarArray(){
         ArrayList<voiture> cars=new ArrayList<>();

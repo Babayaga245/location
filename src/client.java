@@ -116,13 +116,22 @@ public class client {
         }
     }
     public static boolean clientCheck(String nomprenom,String numpermis,String numtel){
-        Pattern IntPattern = Pattern.compile("[^0-9]");
-        Matcher PermisMatcher = IntPattern.matcher(numpermis);
-        Matcher TelMatcher = IntPattern.matcher(numtel);
-        boolean perm = PermisMatcher.find();
-        boolean tel = TelMatcher.find();
+        if (nomprenom.isEmpty() || numpermis.isEmpty() || numtel.isEmpty()){
+            return true;
+        }
+      char[] charraynp = numpermis.toCharArray();
+      char[] charraynt = numtel.toCharArray();
+      for (char c :charraynp){
+          if(Character.isLetter(c)){
+              return true;
+          }
+      }
+      for (char c:charraynt){
+          if(Character.isLetter(c)){
+              return true;
+          }
+      }
+      return false;
 
-        if (perm || tel || nomprenom.isEmpty() || numpermis.isEmpty() || numtel.isEmpty()) {  return true;}
-        return false;
     }
 }
