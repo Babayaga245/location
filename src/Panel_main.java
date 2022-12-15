@@ -494,18 +494,19 @@ public class Panel_main {
         }
 
     }
+
     
     
 
 
-    private static void Loc_panel_init()
+    public static void Loc_panel_init()
     {
 
 
 
 
         JComboBox jComboBox1 = new JComboBox<>();
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(client.GetNpArray()));
         /*jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -513,7 +514,7 @@ public class Panel_main {
         });*/
 
         JComboBox jComboBox2 = new JComboBox<>();
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(Voiture.GetNpArray()));
         /*jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -539,6 +540,7 @@ public class Panel_main {
                 jButton1ActionPerformed(evt);
             }
         });*/
+
 
         JTextField jTextField1 = new JTextField();
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -614,12 +616,21 @@ public class Panel_main {
 
 
 
+        jButton1.addActionListener(e -> loc_ui_add(jComboBox1.getSelectedItem(),jComboBox2.getSelectedItem(),jTextField1.getText(),jTextField2.getText()));
 
 
 
 
 
 
+
+    }
+    public static void loc_ui_add(Object np,Object mat,String numstr,String date){
+        int numpermis = Integer.parseInt(np.toString()) ;
+        int matricule = Integer.parseInt(mat.toString());
+        int num = Integer.parseInt(numstr);
+        facture f = new facture(numpermis,matricule,date,num);
+        facture.addFac(f);
 
 
     }
@@ -668,6 +679,7 @@ public class Panel_main {
                 jButton2ActionPerformed(evt);
             }
         });*/
+
 
         JButton jButton3 = new JButton();
         jButton3.setText("Telecharger pdf");

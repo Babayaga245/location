@@ -71,6 +71,7 @@ public class Update_Window  {
             a = true;
         }
         voiture V = new voiture(mat,model_field.getText(),prix,a);
+        System.out.println(V.GetState());
         voiture.modifyCar(V);
 
         Panel_main.jTable1_voiture.setValueAt(model_field.getText(),Panel_main.jTable1_voiture.getSelectedRow(),0);

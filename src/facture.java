@@ -106,11 +106,11 @@ public class facture {
             Class.forName ("com.mysql.cj.jdbc.Driver");
 
             Connection connection = DriverManager.getConnection(url,username,password);
-            Statement statement=connection.createStatement();
+            Statement stm=connection.createStatement();
             String sql = "insert into facture  values('" + c.GetNumpermis() + "','"
                     + c.GetMatricule() + "','" + c.GetDatedeb()  + "','" + c.GetNumdays()  + "');";
-            statement = connection.createStatement();
-            int i = statement.executeUpdate(sql);
+            stm = connection.createStatement();
+            int i = stm.executeUpdate(sql);
             if (i > 0) {
                 System.out.println("ROW INSERTED");
             } else {

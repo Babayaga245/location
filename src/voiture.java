@@ -1,8 +1,5 @@
 import javax.print.DocFlavor;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class voiture {
@@ -76,6 +73,20 @@ public class voiture {
         return(cars);
 
     }
+    public static String[] GetNpArray(){
+        ArrayList<voiture> arr = voiture.GetCarArray();
+        ArrayList<String> arrint = new ArrayList<>();
+        String[]  idarr = new String[arr.size()];
+        for(voiture c:arr){
+            if (c.GetState()==0) {
+                int temp = c.GetMat();
+                String str = Integer.toString(temp);
+                arrint.add(str);
+            }
+        }
+        idarr = arrint.toArray(new String[arrint.size()]);
+        return idarr;
+    }
     public static void addCar(voiture c){
         String url="jdbc:mysql://localhost:3306/location";
         String username="root";
@@ -109,7 +120,7 @@ public class voiture {
             Class.forName ("com.mysql.cj.jdbc.Driver");
 
             Connection connection = DriverManager.getConnection(url,username,password);
-            Statement statement=connection.createStatement();
+            Statement statement= connection.createStatement();
             String sql = "delete from voiture  where(matricule=" + c.GetMat()+");";
             statement = connection.createStatement();
             int i = statement.executeUpdate(sql);
@@ -133,9 +144,8 @@ public class voiture {
             Class.forName ("com.mysql.cj.jdbc.Driver");
 
             Connection connection = DriverManager.getConnection(url,username,password);
-            Statement statement= connection.createStatement();
-            String sql = "update voiture set modele='"+c.GetMod()+"',prix="+c.GetPrix()+ "',state= ' "+c.GetPrix()+"  where matricule=" + c.GetMat()+";";
-            statement = connection.createStatement();
+            String sql = "update voiture set modele='"+c.GetMod()+"',prix='"+c.GetPrix()+ "',state='"+c.GetState()+"' where voiture.matricule=" + c.GetMat()+";";
+            PreparedStatement statement = connection.prepareStatement(sql);
             int i = statement.executeUpdate(sql);
             if (i > 0) {
                 System.out.println("ROW MODIFIED");

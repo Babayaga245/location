@@ -66,6 +66,18 @@ public class client {
         return(arr);
 
     }
+    public static String[] GetNpArray(){
+        ArrayList<client> arr = client.GetclientArray();
+        ArrayList<String> arrint = new ArrayList<>();
+        String[]  idarr = new String[arr.size()];
+        for(client c:arr){
+            int temp = c.GetNumpermis();
+            String str = Integer.toString(temp);
+            arrint.add(str);
+        }
+        idarr = arrint.toArray(new String[arr.size()]);
+        return idarr;
+    }
     public static void addClient(client c){
         String url="jdbc:mysql://localhost:3306/location";
         String username="root";

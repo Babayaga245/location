@@ -21,8 +21,8 @@ public class Main {
 
         //ll coleur louwel mta3 dashboard wl color lekher mta3 ll panel lokhra
         UI.Start(Color.red,Color.white);
-
-
+        voiture v = new voiture(1458967,"bmw",150,false);
+        //voiture.deleteCar(v);
         //try {
             //Class.forName ("com.mysql.cj.jdbc.Driver");
 
