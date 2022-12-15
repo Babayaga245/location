@@ -223,7 +223,7 @@ public class Panel_main {
         else {
             Voiture = new voiture(Integer.parseInt(jTextField2_voiture.getText()), jTextField1_voiture.getText(), Integer.parseInt(jTextField3_voiture.getText()),false);
             voiture.addCar(Voiture);
-            Object obj[] = {Integer.parseInt(jTextField1_voiture.getText()), jTextField2_voiture.getText(), Integer.parseInt(jTextField3_voiture.getText())};
+            Object obj[] = {jTextField1_voiture.getText(), jTextField2_voiture.getText(), jTextField3_voiture.getText(),0};
             model.addRow(obj);
         }
 
