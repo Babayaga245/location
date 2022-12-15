@@ -4,12 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="UI kmel">
+    <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="added afficher(cars+clients)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel_main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Update_Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Update_Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/facture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/facture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/voiture.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671093846512</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added afficher(cars+clients)">
+      <created>1671104861113</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671104861113</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,16 +266,12 @@
     <MESSAGE value="UI (panels)" />
     <MESSAGE value="Better Ui system" />
     <MESSAGE value="UI kmel" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI kmel" />
+    <MESSAGE value="added afficher(cars+clients)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added afficher(cars+clients)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Panel_main.java</url>
-          <line>276</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Panel_main.java</url>
           <line>671</line>

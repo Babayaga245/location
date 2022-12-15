@@ -46,7 +46,7 @@ public class facture {
     //private  static  String GetDateFin(String date_deb,int num_days){
 
     //}
-    private static int GetPrix(int matricule,int num_days){
+    public int GetPrix(int matricule,int num_days){
         ArrayList<voiture> voitures = new ArrayList<>();
         voitures=voiture.GetCarArray();
         for(int i=0;i<voitures.size();i++){
