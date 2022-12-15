@@ -386,6 +386,7 @@ public class Panel_main {
 
         JButton jButton2 = new JButton();
         jButton2.setText("Supprimer");
+        jButton2.addActionListener(e -> del_c());
         /*jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
