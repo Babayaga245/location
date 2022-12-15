@@ -73,8 +73,8 @@ public class Update_Window  {
         voiture V = new voiture(mat,model_field.getText(),prix,a);
         voiture.modifyCar(V);
 
-        Panel_main.jTable1_voiture.setValueAt(model_field,Panel_main.jTable1_voiture.getSelectedRow(),0);
-        Panel_main.jTable1_voiture.setValueAt(prix_field,Panel_main.jTable1_voiture.getSelectedRow(),2);
-        Panel_main.jTable1_voiture.setValueAt(stat_field,Panel_main.jTable1_voiture.getSelectedRow(),3);
+        Panel_main.jTable1_voiture.setValueAt(model_field.getText(),Panel_main.jTable1_voiture.getSelectedRow(),0);
+        Panel_main.jTable1_voiture.setValueAt(prix_field.getText(),Panel_main.jTable1_voiture.getSelectedRow(),2);
+        Panel_main.jTable1_voiture.setValueAt(stat_field.getText(),Panel_main.jTable1_voiture.getSelectedRow(),3);
     }
 }
