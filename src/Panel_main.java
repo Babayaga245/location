@@ -94,6 +94,7 @@ public class Panel_main {
 
         JButton jButton8 = new JButton();
         jButton8.setText("Supprimer");
+        jButton8.addActionListener(e -> del_v());
 
         JButton jButton9 = new JButton();
         jButton9.setText("Filtrer");
@@ -234,7 +235,31 @@ public class Panel_main {
     }
 
 
+    public static void del_v()
+    {
 
+
+
+        DefaultTableModel model = (DefaultTableModel) jTable1_voiture.getModel();
+
+        int mat = Integer.parseInt(model.getValueAt(jTable1_voiture.getSelectedRow(),2).toString());
+
+        voiture V = new voiture(mat,"",0,true);
+
+        voiture.deleteCar(V);
+
+        if(jTable1_voiture.getSelectedRowCount() == 1) {
+            System.out.println("test");
+            model.removeRow(jTable1_voiture.getSelectedRow());
+
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Select just one row !","ERREUR",JOptionPane.ERROR_MESSAGE);
+        }
+
+
+    }
 
 
 
@@ -368,6 +393,7 @@ public class Panel_main {
 
         JButton jButton3 = new JButton();
         jButton3.setText("Mise a jour");
+        jButton3.addActionListener(e -> c_upd());
         /*jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -442,6 +468,18 @@ public class Panel_main {
 
     }
 
+
+    public static void c_upd()
+    {
+        if(jTable1_client.getSelectedRowCount() == 1) {
+            System.out.println("test");
+            Update_Window new_1 = new Update_Window();
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Select just one row !","ERREUR",JOptionPane.ERROR_MESSAGE);
+        }
+    }
     public static void client_ui_add()
     {
         DefaultTableModel model = (DefaultTableModel) jTable1_client.getModel();
