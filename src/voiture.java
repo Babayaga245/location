@@ -146,6 +146,7 @@ public class voiture {
             Connection connection = DriverManager.getConnection(url,username,password);
             String sql = "update voiture set modele='"+c.GetMod()+"',prix='"+c.GetPrix()+ "',state='"+c.GetState()+"' where voiture.matricule=" + c.GetMat()+";";
             PreparedStatement statement = connection.prepareStatement(sql);
+            System.out.println(sql);
             int i = statement.executeUpdate(sql);
             if (i > 0) {
                 System.out.println("ROW MODIFIED");

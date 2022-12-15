@@ -9,7 +9,7 @@ public class facture {
     private int matricule;
     private String date_deb;
     private int num_days;
-    private String date_fin;
+
     private String nomprenom;
     private String modele;
     private int prix;
@@ -19,7 +19,6 @@ public class facture {
         this.matricule=0;
         this.date_deb=null;
         this.num_days=0;
-        this.date_fin=null;
         this.nomprenom=null;
         this.modele=null;
         this.prix=0;
@@ -32,7 +31,6 @@ public class facture {
         this.date_deb=date_deb;
         this.num_days=num_days;
         this.nomprenom=GetNomPrenom(numpermis);
-        //this.date_fin=GetDateFin(date_deb,num_days);
         this.prix=GetPrix(matricule,num_days);
     }
     private static String GetNomPrenom(int numpermis){
@@ -69,6 +67,12 @@ public class facture {
     }
     public int GetNumdays(){
         return(this.num_days);
+    }
+    public String Getnomprenom(){
+        return(this.nomprenom);
+    }
+    public String Getmodele(){
+        return(this.modele);
     }
 
     public static facture[] GetfacArray(int n){
