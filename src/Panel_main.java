@@ -552,7 +552,7 @@ public class Panel_main {
         });*/
 
         JTextField jTextField2 = new JTextField();
-        jTextField2.setText("DD/MM/YYYY");
+        jTextField2.setText("YYYY/MM/DD");
 
         /*jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
