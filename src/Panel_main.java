@@ -553,7 +553,7 @@ public class Panel_main {
         });*/
 
         JTextField jTextField2 = new JTextField();
-        jTextField2.setText("YYYY/MM/DD");
+        jTextField2.setText("DD/MM/YYYY");
 
         /*jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -678,16 +678,16 @@ public class Panel_main {
 
 
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        ArrayList<facture> fac_arr=facture.GetfacArray();
-        Object rowData[] = new Object[4];
-        for(int i = 0; i < fac_arr.size(); i++)
+        facture fac_arr[] = new facture[5];
+        Object rowData[] = new Object[5];
+        for(int i = 0; i < fac_arr.length; i++)
         {
-            rowData[0] = fac_arr.get(i).Getnomprenom();
-            rowData[1] = fac_arr.get(i).Getmodele();
-            rowData[2] = fac_arr.get(i).GetMatricule();
-            rowData[3] = fac_arr.get(i).GetNumdays();
-            rowData[4] = fac_arr.get(i).GetPrix();
-            rowData[5] = fac_arr.get(i).GetDatedeb();
+            rowData[0] = fac_arr[i].Getnomprenom();
+            rowData[1] = fac_arr[i].Getmodele();
+            rowData[2] = fac_arr[i].GetMatricule();
+            rowData[3] = fac_arr[i].GetDatedeb();
+            rowData[4] = fac_arr[i].GetNumdays();
+
 
             model.addRow(rowData);
 
