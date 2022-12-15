@@ -97,7 +97,8 @@ public class Panel_main {
         jButton8.addActionListener(e -> del_v());
 
         JButton jButton9 = new JButton();
-        jButton9.setText("Filtrer");
+        jButton9.setText("***");
+
 
         jButton10_Voiture = new JButton();
         jButton10_Voiture.setText("Mise a jour");
@@ -626,6 +627,8 @@ public class Panel_main {
 
     }
     public static void loc_ui_add(Object np,Object mat,String numstr,String date){
+
+        DefaultTableModel model = (DefaultTableModel) jTable1_voiture.getModel();
         int numpermis = Integer.parseInt(np.toString()) ;
         int matricule = Integer.parseInt(mat.toString());
         int num = Integer.parseInt(numstr);
@@ -645,7 +648,7 @@ public class Panel_main {
 
                 },
                 new String [] {
-                        "Nom Client", "Model de voiture", "Matricule", "Date debut", "Date Fin", "Prix"
+                        "Nom Client", "Model de voiture", "Matricule", "Date debut", "num jours", "Prix"
                 }
         ) {
             Class[] types = new Class [] {
@@ -671,6 +674,27 @@ public class Panel_main {
             jTable1.getColumnModel().getColumn(2).setResizable(false);
             jTable1.getColumnModel().getColumn(5).setResizable(false);
         }
+
+
+
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        ArrayList<facture> fac_arr=facture.GetfacArray();
+        Object rowData[] = new Object[4];
+        for(int i = 0; i < fac_arr.size(); i++)
+        {
+            rowData[0] = fac_arr.get(i).Getnomprenom();
+            rowData[1] = fac_arr.get(i).Getmodele();
+            rowData[2] = fac_arr.get(i).GetMatricule();
+            rowData[3] = fac_arr.get(i).GetNumdays();
+            rowData[4] = fac_arr.get(i).GetPrix();
+            rowData[5] = fac_arr.get(i).GetDatedeb();
+
+            model.addRow(rowData);
+
+        }
+
+
+
 
         JButton jButton2 = new JButton();
         jButton2.setText("Supprimer");

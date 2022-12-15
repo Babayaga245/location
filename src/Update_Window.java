@@ -55,7 +55,7 @@ public class Update_Window  {
 
     }
 
-    public static void upd()
+    public void upd()
     {
 
         DefaultTableModel model = (DefaultTableModel)Panel_main.jTable1_voiture.getModel();
