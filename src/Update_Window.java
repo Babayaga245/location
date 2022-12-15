@@ -59,7 +59,7 @@ public class Update_Window  {
     {
 
         DefaultTableModel model = (DefaultTableModel)Panel_main.jTable1_voiture.getModel();
-        int mat = Integer.parseInt(model.getValueAt(Panel_main.jTable1_voiture.getSelectedRow(),2).toString());
+        int mat = Integer.parseInt(model.getValueAt(Panel_main.jTable1_voiture.getSelectedRow(),1).toString());
         int prix = Integer.parseInt(prix_field.getText());
         boolean a;
         if(Integer.parseInt(stat_field.getText()) == 0)

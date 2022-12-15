@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d487c93c-4411-419a-9460-203aee644b5e" name="Changes" comment="UI kmel">
       <change beforePath="$PROJECT_DIR$/src/Panel_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel_main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Update_Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Update_Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671104861113</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="UI kmel">
+      <created>1671106993405</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1671106993405</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,16 +271,16 @@
     <MESSAGE value="UI test" />
     <MESSAGE value="UI (panels)" />
     <MESSAGE value="Better Ui system" />
-    <MESSAGE value="UI kmel" />
     <MESSAGE value="added afficher(cars+clients)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added afficher(cars+clients)" />
+    <MESSAGE value="UI kmel" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI kmel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Panel_main.java</url>
-          <line>671</line>
+          <line>697</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

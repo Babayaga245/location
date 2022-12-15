@@ -243,7 +243,7 @@ public class Panel_main {
 
         DefaultTableModel model = (DefaultTableModel) jTable1_voiture.getModel();
 
-        int mat = Integer.parseInt(model.getValueAt(jTable1_voiture.getSelectedRow(),2).toString());
+        int mat = Integer.parseInt(model.getValueAt(jTable1_voiture.getSelectedRow(),1).toString());
 
         voiture V = new voiture(mat,"",0,true);
 
@@ -469,6 +469,32 @@ public class Panel_main {
 
     }
 
+    public static void del_c()
+    {
+
+
+
+        DefaultTableModel model = (DefaultTableModel) jTable1_client.getModel();
+
+        int mat = Integer.parseInt(model.getValueAt(jTable1_client.getSelectedRow(),1).toString());
+
+        client c = new client();
+
+        client.deleteClient(c);
+
+        if(jTable1_client.getSelectedRowCount() == 1) {
+            System.out.println("test");
+            model.removeRow(jTable1_client.getSelectedRow());
+
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Select just one row !","ERREUR",JOptionPane.ERROR_MESSAGE);
+        }
+
+
+    }
+
 
     public static void c_upd()
     {
@@ -677,7 +703,7 @@ public class Panel_main {
 
 
 
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+       /* DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         facture fac_arr[] = new facture[5];
         Object rowData[] = new Object[5];
         for(int i = 0; i < fac_arr.length; i++)
@@ -691,7 +717,7 @@ public class Panel_main {
 
             model.addRow(rowData);
 
-        }
+        }*/
 
 
 
